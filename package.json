@@ -1,0 +1,85 @@
+{
+  "name": "journey-extension",
+  "displayName": "Journey Extension",
+  "description": "VSCode extension for creating Journey structures (experience, page, module, step, bloc)",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:journey.newExperience",
+    "onCommand:journey.newPage",
+    "onCommand:journey.newModule",
+    "onCommand:journey.newStep",
+    "onCommand:journey.newBloc"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "journey.newExperience",
+        "title": "New Journey Experience"
+      },
+      {
+        "command": "journey.newPage",
+        "title": "New Journey Page"
+      },
+      {
+        "command": "journey.newModule",
+        "title": "New Journey Module"
+      },
+      {
+        "command": "journey.newStep",
+        "title": "New Journey Step"
+      },
+      {
+        "command": "journey.newBloc",
+        "title": "New Journey Bloc"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "journey.newExperience",
+          "group": "navigation@10",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "journey.newPage",
+          "group": "navigation@11",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "journey.newModule",
+          "group": "navigation@12",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "journey.newStep",
+          "group": "navigation@13",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "journey.newBloc",
+          "group": "navigation@14",
+          "when": "explorerResourceIsFolder"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "pack": "vsce package",
+    "install:cli": "code --install-extension $(ls *.vsix | head -n 1) --force"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0",
+    "vsce": "^2.15.0"
+  },
+  "publisher": "my-org"
+}
