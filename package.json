@@ -3,6 +3,12 @@
   "displayName": "Journey Extension",
   "description": "VSCode extension for creating Journey structures (experience, page, module, step, bloc)",
   "version": "0.0.2",
+  "publisher": "my-org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chink603/journey-extension.git"
+  },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -73,6 +79,7 @@
     "watch": "tsc -watch -p ./",
     "package": "vsce package",
     "pack": "vsce package",
+    "pack:out": "vsce package --out",
     "install:cli": "code --install-extension $(ls *.vsix | head -n 1) --force"
   },
   "devDependencies": {
@@ -80,6 +87,5 @@
     "@types/vscode": "^1.85.0",
     "typescript": "^5.3.0",
     "vsce": "^2.15.0"
-  },
-  "publisher": "my-org"
+  }
 }
