@@ -9,6 +9,7 @@
     "url": "https://github.com/chink603/journey-extension.git"
   },
   "license": "MIT",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.85.0"
   },
