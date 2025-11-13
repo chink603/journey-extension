@@ -25,51 +25,59 @@
     "commands": [
       {
         "command": "journey.newExperience",
-        "title": "New Journey Experience"
+        "title": "Experience"
       },
       {
         "command": "journey.newPage",
-        "title": "New Journey Page"
+        "title": "Page"
       },
       {
         "command": "journey.newModule",
-        "title": "New Journey Module"
+        "title": "Journey"
       },
       {
         "command": "journey.newStep",
-        "title": "New Journey Step"
+        "title": "Step"
       },
       {
         "command": "journey.newBloc",
-        "title": "New Journey Bloc"
+        "title": "Bloc"
+      }
+    ],
+    "submenus": [
+      {
+        "id": "journey.newMicroJourney",
+        "label": "New Micro Journey"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "journey.newExperience",
+          "submenu": "journey.newMicroJourney",
           "group": "navigation@10",
           "when": "explorerResourceIsFolder"
+        }
+      ],
+      "journey.newMicroJourney": [
+        {
+          "command": "journey.newExperience",
+          "group": "1@1"
         },
         {
           "command": "journey.newPage",
-          "group": "navigation@11",
-          "when": "explorerResourceIsFolder"
+          "group": "1@2"
         },
         {
           "command": "journey.newModule",
-          "group": "navigation@12",
-          "when": "explorerResourceIsFolder"
+          "group": "1@3"
         },
         {
           "command": "journey.newStep",
-          "group": "navigation@13",
-          "when": "explorerResourceIsFolder"
+          "group": "1@4"
         },
         {
           "command": "journey.newBloc",
-          "group": "navigation@14",
-          "when": "explorerResourceIsFolder"
+          "group": "1@5"
         }
       ]
     }
